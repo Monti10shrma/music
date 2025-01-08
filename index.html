@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css" />
+    
+    <!-- Font Awesome Library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="music-player">
+        <nav>
+          <div class="circle">
+            <i class="fa-solid fa-angle-left"></i>
+          </div>
+          <div class="circle">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </nav>
+
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0XwlkbArkVxD3a0T3bZ6l5wlGbY3UvlBPqA&s" alt="Song" class="song-img" id="songImg" />
+        <h1 id="songTitle">Old Money</h1>
+        <p id="songArtist">AP Dhillon</p>
+
+        <audio id="song">
+          <source src="https://www.youtube.com/embed/-K-WY0WRT48?si=zrD1xSJMdXoKqFft" type="audio/mpeg" />
+        </audio>
+
+        <input type="range" value="0" id="progress" />
+
+        <div class="controls">
+          <div onclick="prevSong()"><i class="fa-solid fa-backward"></i></div>
+          <div onclick="playPause()">
+            <i class="fa-solid fa-play" id="controlIcon"></i>
+          </div>
+          <div onclick="nextSong()"><i class="fa-solid fa-forward"></i></div>
+        </div>
+      </div>
+    </div>
